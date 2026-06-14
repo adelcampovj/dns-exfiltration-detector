@@ -12,7 +12,7 @@ The project starts simple with offline log analysis and will later expand into S
 
 ## Current Version
 
-**v0.1 - Offline DNS Log Analyzer**
+**v0.2 - Offline DNS Log Analyzer with SQLite Storage**
 
 Current features:
 
@@ -24,6 +24,8 @@ Current features:
 - Skips blank lines
 - Skips malformed log lines
 - Prints a summary of analyzed queries and generated alerts
+- Saves parsed DNS queries to SQLite
+- Saves generated alerts to SQLite
 
 ## Detection Rules
 
@@ -40,11 +42,11 @@ Current version:
 
 - Python
 - Regular expressions
+- SQLite
 - Linux command line
 
 Planned future technologies:
 
-- SQLite
 - Flask
 - HTML
 - CSS

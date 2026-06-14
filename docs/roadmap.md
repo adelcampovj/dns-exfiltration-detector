@@ -19,15 +19,17 @@ Features:
 
 ## v0.2 - SQLite Storage
 
-**Status:** Planned
+**Status:** Complete
 
-Planned features:
+Features:
 
-- Create SQLite database
-- Store DNS queries
-- Store generated alerts
-- Add database helper functions
-- Prepare data for Flask dashboard
+- Created SQLite database
+- Created `dns_queries` table
+- Created `alerts` table
+- Added database helper functions
+- Saved parsed DNS queries to SQLite
+- Saved generated alerts to SQLite
+- Prepared stored data for future Flask dashboard
 
 ## v0.3 - Flask Dashboard
 
