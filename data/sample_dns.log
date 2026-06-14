@@ -1,0 +1,7 @@
+2026-06-13 10:00:01,192.168.1.10,www.google.com,A
+2026-06-13 10:00:03,192.168.1.11,mail.microsoft.com,A
+2026-06-13 10:00:05,192.168.1.12,cdn.cloudflare.com,A
+2026-06-13 10:01:10,192.168.1.25,dGhpcyBpcyBleGZpbA.attacker-test.com,TXT
+2026-06-13 10:01:12,192.168.1.25,a9f83bc91d21ff45.attacker-test.com,A
+2026-06-13 10:01:14,192.168.1.25,verylongrandomsubdomainwithmanycharacters123456789.attacker-test.com,A
+2026-06-13 10:01:16,192.168.1.25,normal.example.com,A
