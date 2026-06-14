@@ -1,4 +1,5 @@
 import re
+from database import create_tables, insert_dns_query, insert_alert
 
 LOG_FILE = "data/sample_dns.log"
 
@@ -76,6 +77,8 @@ def get_severity(score):
 
 
 def main():
+    create_tables()
+
     total_queries = 0
     total_alerts = 0
 
@@ -101,11 +104,23 @@ def main():
 
             timestamp, source_ip, domain, record_type = parts
 
+            insert_dns_query(timestamp, source_ip, domain, record_type)
+
             score, reasons = analyze_domain(domain, record_type)
             severity = get_severity(score)
 
             if severity != "NONE":
                 total_alerts += 1
+
+                insert_alert(
+                    timestamp,
+                    source_ip,
+                    domain,
+                    record_type,
+                    severity,
+                    score,
+                    ", ".join(reasons)
+                )
 
                 print()
                 print(f"[{severity}] {domain}")
