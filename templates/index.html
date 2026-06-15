@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>DNS Exfiltration Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>DNS Exfiltration Detector</h1>
+    <header>
+        <h1>DNS Exfiltration Detector</h1>
+        <p>Blue-team dashboard for suspicious DNS activity</p>
+    </header>
 
-    <p>Flask dashboard is running.</p>
+    <main>
+        <section class="summary-cards">
+            <div class="card">
+                <h3>Total DNS Queries</h3>
+                <p>{{ total_queries }}</p>
+            </div>
 
-    <h2>Dashboard Summary</h2>
+            <div class="card">
+                <h3>Total Alerts</h3>
+                <p>{{ total_alerts }}</p>
+            </div>
+        </section>
 
-    <ul>
-        <li>Total DNS Queries: {{ total_queries }}</li>
-        <li>Total Alerts: {{ total_alerts }}</li>
-    </ul>
+        <section>
+            <h2>Recent Alerts</h2>
 
-    <h2>Recent Alerts</h2>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Source IP</th>
+                    <th>Domain</th>
+                    <th>Record Type</th>
+                    <th>Severity</th>
+                    <th>Score</th>
+                    <th>Reasons</th>
+                </tr>
 
-    <table border="1">
-        <tr>
-            <th>Timestamp</th>
-            <th>Source IP</th>
-            <th>Domain</th>
-            <th>Record Type</th>
-            <th>Severity</th>
-            <th>Score</th>
-            <th>Reasons</th>
-        </tr>
-
-        {% for alert in recent_alerts %}
-        <tr>
-            <td>{{ alert[0] }}</td>
-            <td>{{ alert[1] }}</td>
-            <td>{{ alert[2] }}</td>
-            <td>{{ alert[3] }}</td>
-            <td>{{ alert[4] }}</td>
-            <td>{{ alert[5] }}</td>
-            <td>{{ alert[6] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+                {% for alert in recent_alerts %}
+                <tr>
+                    <td>{{ alert[0] }}</td>
+                    <td>{{ alert[1] }}</td>
+                    <td>{{ alert[2] }}</td>
+                    <td>{{ alert[3] }}</td>
+                    <td class="severity-{{ alert[4] }}">{{ alert[4] }}</td>
+                    <td>{{ alert[5] }}</td>
+                    <td>{{ alert[6] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </main>
 </body>
 </html>
