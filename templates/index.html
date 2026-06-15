@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DNS Exfiltration Detector</title>
+</head>
+<body>
+    <h1>DNS Exfiltration Detector</h1>
+
+    <p>Flask dashboard is running.</p>
+
+    <h2>Dashboard Summary</h2>
+
+    <ul>
+        <li>Total DNS Queries: {{ total_queries }}</li>
+        <li>Total Alerts: {{ total_alerts }}</li>
+    </ul>
+
+    <h2>Recent Alerts</h2>
+
+    <table border="1">
+        <tr>
+            <th>Timestamp</th>
+            <th>Source IP</th>
+            <th>Domain</th>
+            <th>Record Type</th>
+            <th>Severity</th>
+            <th>Score</th>
+            <th>Reasons</th>
+        </tr>
+
+        {% for alert in recent_alerts %}
+        <tr>
+            <td>{{ alert[0] }}</td>
+            <td>{{ alert[1] }}</td>
+            <td>{{ alert[2] }}</td>
+            <td>{{ alert[3] }}</td>
+            <td>{{ alert[4] }}</td>
+            <td>{{ alert[5] }}</td>
+            <td>{{ alert[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

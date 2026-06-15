@@ -61,6 +61,45 @@ def insert_alert(timestamp, source_ip, domain, record_type, severity, score, rea
     connection.close()
 
 
+def get_total_queries():
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT COUNT(*) FROM dns_queries")
+    total = cursor.fetchone()[0]
+
+    connection.close()
+    return total
+
+
+def get_total_alerts():
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT COUNT(*) FROM alerts")
+    total = cursor.fetchone()[0]
+
+    connection.close()
+    return total
+
+
+def get_recent_alerts(limit=10):
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        SELECT timestamp, source_ip, domain, record_type, severity, score, reasons
+        FROM alerts
+        ORDER BY id DESC
+        LIMIT ?
+    """, (limit,))
+
+    alerts = cursor.fetchall()
+
+    connection.close()
+    return alerts
+
+
 if __name__ == "__main__":
     create_tables()
     print("Database and tables created successfully.")
