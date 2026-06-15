@@ -37,7 +37,12 @@
                 <h3>High Severity</h3>
                 <p>{{ severity_counts["HIGH"] }}</p>
             </div>
-            
+
+        </section>
+
+        <section class="chart-section">
+            <h2>Alerts by Severity</h2>
+            <canvas id="severityChart"></canvas>
         </section>
 
         <section>
@@ -68,5 +73,18 @@
             </table>
         </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const severityCounts = {
+            low: Number("{{ severity_counts['LOW'] }}"),
+            medium: Number("{{ severity_counts['MEDIUM'] }}"),
+            high: Number("{{ severity_counts['HIGH'] }}")
+        };
+    </script>
+
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+
 </body>
 </html>

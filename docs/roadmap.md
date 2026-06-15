@@ -46,7 +46,7 @@ Planned features:
 
 ## v0.4 - Chart.js Visualizations
 
-**Status:** Planned
+**Status:** In Progress
 
 Planned features:
 

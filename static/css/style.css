@@ -79,3 +79,16 @@ tr:hover {
     color: #047857;
     font-weight: bold;
 }
+
+.chart-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section canvas {
+    max-width: 500px;
+    max-height: 300px;
+}
