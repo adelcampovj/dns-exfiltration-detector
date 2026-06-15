@@ -100,6 +100,31 @@ def get_recent_alerts(limit=10):
     return alerts
 
 
+def get_alert_counts_by_severity():
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        SELECT severity, COUNT(*)
+        FROM alerts
+        GROUP BY severity
+    """)
+
+    rows = cursor.fetchall()
+    connection.close()
+
+    counts = {
+        "LOW": 0,
+        "MEDIUM": 0,
+        "HIGH": 0
+    }
+
+    for severity, count in rows:
+        counts[severity] = count
+
+    return counts
+
+
 if __name__ == "__main__":
     create_tables()
     print("Database and tables created successfully.")

@@ -22,6 +22,22 @@
                 <h3>Total Alerts</h3>
                 <p>{{ total_alerts }}</p>
             </div>
+
+            <div class="card">
+                <h3>Low Severity</h3>
+                <p>{{ severity_counts["LOW"] }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Medium Severity</h3>
+                <p>{{ severity_counts["MEDIUM"] }}</p>
+            </div>
+
+            <div class="card">
+                <h3>High Severity</h3>
+                <p>{{ severity_counts["HIGH"] }}</p>
+            </div>
+            
         </section>
 
         <section>

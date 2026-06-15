@@ -33,7 +33,7 @@ Features:
 
 ## v0.3 - Flask Dashboard
 
-**Status:** Planned
+**Status:** Complete
 
 Planned features:
 
