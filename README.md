@@ -12,7 +12,7 @@ The project starts simple with offline log analysis and will later expand into S
 
 ## Current Version
 
-**v0.2 - Offline DNS Log Analyzer with SQLite Storage**
+**v0.4 - Flask Dashboard with Chart.js Visualizations**
 
 Current features:
 
@@ -26,6 +26,10 @@ Current features:
 - Prints a summary of analyzed queries and generated alerts
 - Saves parsed DNS queries to SQLite
 - Saves generated alerts to SQLite
+- Displays dashboard summary cards with Flask
+- Shows recent alerts in an HTML table
+- Uses CSS for dashboard styling
+- Uses Chart.js to visualize alerts by severity
 
 ## Detection Rules
 
@@ -43,15 +47,12 @@ Current version:
 - Python
 - Regular expressions
 - SQLite
-- Linux command line
-
-Planned future technologies:
-
 - Flask
 - HTML
 - CSS
 - JavaScript
 - Chart.js
+- Linux command line
 
 ## Project Structure
 

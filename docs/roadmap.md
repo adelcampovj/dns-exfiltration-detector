@@ -48,9 +48,14 @@ Planned features:
 
 **Status:** In Progress
 
+Completed features:
+
+- Added JavaScript folder
+- Added Chart.js to the dashboard
+- Added alerts-by-severity bar chart
+
 Planned features:
 
-- Alerts by severity chart
 - Top suspicious domains chart
 - DNS query volume chart
 - Detection reasons chart
