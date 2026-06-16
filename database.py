@@ -124,6 +124,23 @@ def get_alert_counts_by_severity():
 
     return counts
 
+def get_top_suspicious_domains(limit=5):
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        SELECT domain, COUNT(*) AS alert_count, MAX(score) AS highest_score
+        FROM alerts
+        GROUP BY domain
+        ORDER BY alert_count DESC, highest_score DESC
+        LIMIT ?
+    """, (limit,))
+
+    domains = cursor.fetchall()
+
+    connection.close()
+    return domains
+
 
 if __name__ == "__main__":
     create_tables()

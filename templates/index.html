@@ -46,6 +46,26 @@
         </section>
 
         <section>
+            <h2>Top Suspicious Domains</h2>
+
+            <table>
+                <tr>
+                    <th>Domain</th>
+                    <th>Alert Count</th>
+                    <th>Highest Score</th>
+                </tr>
+
+                {% for domain in top_domains %}
+                <tr>
+                    <td>{{ domain[0] }}</td>
+                    <td>{{ domain[1] }}</td>
+                    <td>{{ domain[2] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+        <section>
             <h2>Recent Alerts</h2>
 
             <table>
