@@ -21,6 +21,9 @@ def index():
     recent_alerts = get_recent_alerts()
     severity_counts = get_alert_counts_by_severity()
     top_domains = get_top_suspicious_domains()
+    
+    top_domain_labels = [domain[0] for domain in top_domains]
+    top_domain_counts = [domain[1] for domain in top_domains]
 
     return render_template(
         "index.html",
@@ -28,7 +31,9 @@ def index():
         total_alerts=total_alerts,
         recent_alerts=recent_alerts,
         severity_counts=severity_counts,
-        top_domains=top_domains
+        top_domains=top_domains,
+        top_domain_labels=top_domain_labels,
+        top_domain_counts=top_domain_counts
     )
 
 

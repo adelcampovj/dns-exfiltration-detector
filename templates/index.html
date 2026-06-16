@@ -48,6 +48,10 @@
         <section>
             <h2>Top Suspicious Domains</h2>
 
+            <div class="chart-section">
+                <canvas id="topDomainsChart"></canvas>
+            </div>
+
             <table>
                 <tr>
                     <th>Domain</th>
@@ -102,6 +106,9 @@
             medium: Number("{{ severity_counts['MEDIUM'] }}"),
             high: Number("{{ severity_counts['HIGH'] }}")
         };
+
+        const topDomainLabels = JSON.parse('{{ top_domain_labels | tojson | safe }}');
+        const topDomainCounts = JSON.parse('{{ top_domain_counts | tojson | safe }}');
     </script>
 
     <script src="{{ url_for('static', filename='js/charts.js') }}"></script>

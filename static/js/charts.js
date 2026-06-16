@@ -38,3 +38,42 @@ if (severityChartElement) {
         }
     });
 }
+
+
+const topDomainsChartElement = document.getElementById("topDomainsChart");
+
+if (topDomainsChartElement) {
+    new Chart(topDomainsChartElement, {
+        type: "bar",
+        data: {
+            labels: topDomainLabels,
+            datasets: [
+                {
+                    label: "Alert Count",
+                    data: topDomainCounts
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            indexAxis: "y",
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: "Top Suspicious Domains"
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+}
