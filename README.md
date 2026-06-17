@@ -59,33 +59,23 @@ Current features:
 
 Add a screenshot here after running the Flask dashboard.
 
-```markdown
+## Dashboard Preview
+
+### Main Dashboard
+
 ![Dashboard Overview](screenshots/dashboard-overview.png)
-```
 
 ### Alert Severity Chart
 
-Add a screenshot here showing the alerts-by-severity chart.
-
-```markdown
 ![Alert Severity Chart](screenshots/alert-severity-chart.png)
-```
 
 ### Top Suspicious Root Domains
 
-Add a screenshot here showing the top suspicious root domains chart/table.
-
-```markdown
 ![Top Suspicious Root Domains](screenshots/top-root-domains.png)
-```
 
 ### Detection Reasons
 
-Add a screenshot here showing the detection reasons chart.
-
-```markdown
 ![Detection Reasons](screenshots/detection-reasons.png)
-```
 
 Recommended screenshot folder:
 
