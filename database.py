@@ -179,6 +179,36 @@ def get_top_suspicious_domains(limit=5):
     return top_domains
 
 
+def get_detection_reason_counts():
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT reasons FROM alerts")
+
+    rows = cursor.fetchall()
+    connection.close()
+
+    reason_counts = {}
+
+    for row in rows:
+        reasons_text = row[0]
+
+        reasons = reasons_text.split(", ")
+
+        for reason in reasons:
+            if reason not in reason_counts:
+                reason_counts[reason] = 0
+
+            reason_counts[reason] += 1
+
+    sorted_reasons = sorted(
+        reason_counts.items(),
+        key=lambda item: item[1],
+        reverse=True
+    )
+
+    return sorted_reasons
+
 if __name__ == "__main__":
     create_tables()
     print("Database and tables created successfully.")

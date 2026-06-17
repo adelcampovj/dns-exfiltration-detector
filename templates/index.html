@@ -69,6 +69,11 @@
             </table>
         </section>
 
+        <section class="chart-section">
+            <h2>Detection Reasons</h2>
+            <canvas id="reasonsChart"></canvas>
+        </section>
+
         <section>
             <h2>Recent Alerts</h2>
 
@@ -109,6 +114,9 @@
 
         const topDomainLabels = JSON.parse('{{ top_domain_labels | tojson | safe }}');
         const topDomainCounts = JSON.parse('{{ top_domain_counts | tojson | safe }}');
+        
+        const reasonLabels = JSON.parse('{{ reason_labels | tojson | safe }}');
+        const reasonValues = JSON.parse('{{ reason_values | tojson | safe }}');
     </script>
 
     <script src="{{ url_for('static', filename='js/charts.js') }}"></script>

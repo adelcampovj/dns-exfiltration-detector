@@ -1,7 +1,43 @@
 2026-06-13 10:00:01,192.168.1.10,www.google.com,A
-2026-06-13 10:00:03,192.168.1.11,mail.microsoft.com,A
-2026-06-13 10:00:05,192.168.1.12,cdn.cloudflare.com,A
+2026-06-13 10:00:03,192.168.1.10,mail.google.com,A
+2026-06-13 10:00:05,192.168.1.11,login.microsoftonline.com,A
+2026-06-13 10:00:07,192.168.1.11,outlook.office365.com,A
+2026-06-13 10:00:10,192.168.1.12,cdn.cloudflare.com,A
+2026-06-13 10:00:14,192.168.1.12,api.github.com,A
+2026-06-13 10:00:18,192.168.1.13,www.linkedin.com,A
+2026-06-13 10:00:22,192.168.1.13,static.cloudflareinsights.com,A
+2026-06-13 10:00:27,192.168.1.14,assets.amazon.com,A
+2026-06-13 10:00:31,192.168.1.14,images.apple.com,A
+2026-06-13 10:00:35,192.168.1.15,normal.example.com,A
+2026-06-13 10:00:40,192.168.1.15,support.zoom.us,A
+
 2026-06-13 10:01:10,192.168.1.25,dGhpcyBpcyBleGZpbA.attacker-test.com,TXT
 2026-06-13 10:01:12,192.168.1.25,a9f83bc91d21ff45.attacker-test.com,A
 2026-06-13 10:01:14,192.168.1.25,verylongrandomsubdomainwithmanycharacters123456789.attacker-test.com,A
-2026-06-13 10:01:16,192.168.1.25,normal.example.com,A
+2026-06-13 10:01:16,192.168.1.25,c2VjcmV0X2ZpbGVfZGF0YQ.attacker-test.com,TXT
+2026-06-13 10:01:18,192.168.1.25,4f7a91bc22dd10aa.attacker-test.com,A
+2026-06-13 10:01:20,192.168.1.25,anotherverylongsubdomainusedfortestingdnsalerts.attacker-test.com,A
+
+2026-06-13 10:02:01,192.168.1.30,dXNlcm5hbWU9YWRtaW4.tunnel-lab.net,TXT
+2026-06-13 10:02:03,192.168.1.30,cGFzc3dvcmQ9dGVzdDEyMw.tunnel-lab.net,TXT
+2026-06-13 10:02:05,192.168.1.30,6578616d706c65686578.tunnel-lab.net,A
+2026-06-13 10:02:07,192.168.1.30,longsubdomainwithencodedlookingcontent987654321.tunnel-lab.net,A
+2026-06-13 10:02:09,192.168.1.30,9b8c7d6e5f4a3b2c.tunnel-lab.net,A
+
+2026-06-13 10:03:01,192.168.1.40,www.wikipedia.org,A
+2026-06-13 10:03:05,192.168.1.40,developer.mozilla.org,A
+2026-06-13 10:03:10,192.168.1.41,updates.ubuntu.com,A
+2026-06-13 10:03:15,192.168.1.41,security.ubuntu.com,A
+
+2026-06-13 10:04:01,192.168.1.50,YmFzZTY0X3Rlc3RfZGF0YQ.exfil-demo.org,TXT
+2026-06-13 10:04:03,192.168.1.50,abcdef1234567890.exfil-demo.org,A
+2026-06-13 10:04:05,192.168.1.50,superlongsubdomaincreatedtosimulatednstunneling.exfil-demo.org,A
+2026-06-13 10:04:07,192.168.1.50,72616e646f6d686578.exfil-demo.org,A
+
+2026-06-13 10:05:01,192.168.1.60,_dmarc.company-demo.com,TXT
+2026-06-13 10:05:03,192.168.1.60,spf.company-demo.com,TXT
+2026-06-13 10:05:05,192.168.1.60,verify.company-demo.com,TXT
+
+2026-06-13 10:06:01,192.168.1.70,dGhpcyBpcyBhIHZlcnkgbG9uZyBlbmNvZGVkIHN1YmRvbWFpbg.high-risk-test.com,TXT
+2026-06-13 10:06:03,192.168.1.70,c2VjcmV0ZGF0YWJlaW5nc2VudG92ZXJkbnM.high-risk-test.com,TXT
+2026-06-13 10:06:05,192.168.1.70,VGhpcyBpcyBhbm90aGVyIHZlcnkgbG9uZ2VuY29kZWRzdHJpbmc.high-risk-test.com,TXT

@@ -77,3 +77,41 @@ if (topDomainsChartElement) {
         }
     });
 }
+
+const reasonsChartElement = document.getElementById("reasonsChart");
+
+if (reasonsChartElement) {
+    new Chart(reasonsChartElement, {
+        type: "bar",
+        data: {
+            labels: reasonLabels,
+            datasets: [
+                {
+                    label: "Detection Count",
+                    data: reasonValues
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            indexAxis: "y",
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: "Detection Reasons"
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+}
