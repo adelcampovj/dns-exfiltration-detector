@@ -63,7 +63,7 @@ if (topDomainsChartElement) {
                 },
                 title: {
                     display: true,
-                    text: "Top Suspicious Domains"
+                    text: "Top Suspicious Root Domains"
                 }
             },
             scales: {
