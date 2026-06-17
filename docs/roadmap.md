@@ -53,10 +53,10 @@ Completed features:
 - Added JavaScript folder
 - Added Chart.js to the dashboard
 - Added alerts-by-severity bar chart
+- Top suspicious domains chart
 
 Planned features:
 
-- Top suspicious domains chart
 - DNS query volume chart
 - Detection reasons chart
 

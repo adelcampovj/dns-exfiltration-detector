@@ -30,6 +30,7 @@ Current features:
 - Shows recent alerts in an HTML table
 - Uses CSS for dashboard styling
 - Uses Chart.js to visualize alerts by severity
+- Uses Chart.js to show top suspicious domains
 
 ## Detection Rules
 
