@@ -46,19 +46,15 @@ Planned features:
 
 ## v0.4 - Chart.js Visualizations
 
-**Status:** In Progress
+**Status:** Complete
 
 Completed features:
 
 - Added JavaScript folder
 - Added Chart.js to the dashboard
 - Added alerts-by-severity bar chart
-- Top suspicious domains chart
-
-Planned features:
-
-- DNS query volume chart
-- Detection reasons chart
+- Added top suspicious root domains bar chart
+- Added detection reasons chart
 
 ## v0.5 - Near Real-Time Monitoring
 
